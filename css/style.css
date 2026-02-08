@@ -1,0 +1,191 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; 
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+    /* Animação suave para o header ao carregar */
+    animation: fadeInDown 1s ease-out;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    /* Animação de pulso na foto */
+    animation: pulse 2s infinite;
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.social-links a {
+    color: #4da6ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #fff;
+}
+
+section {
+    max-width: 800px;
+    width: 90%;
+    margin: 2rem auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    width: 100%;
+    box-sizing: border-box;
+    /* Efeito de zoom suave ao passar o mouse nos cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #1a1a1a;
+    border-bottom: 2px solid #4da6ff;
+    padding-bottom: 0.5rem;
+}
+
+#habilidades ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #1a1a1a;
+    color: white;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* --- Estilos de Certificações --- */
+.cert-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cert-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.cert-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    background-color: #1a1a1a;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.cert-link:hover {
+    background-color: #4da6ff;
+}
+
+.pet-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+}
+
+.pet-img {
+    /* Define o tamanho da área */
+    width: 200px;
+    height: 200px;
+    
+    /* Garante que a foto da Bella cubra todo o espaço */
+    object-fit: cover;
+    
+    /* REMOVIDO: clip-path do coração */
+    
+    /* ADICIONADO: Borda arredondada suave (quadrado com cantos arredondados) */
+    border-radius: 15px;
+    border: 4px solid white; /* Borda branca para destacar */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Sombra para dar profundidade */
+    
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.pet-img-heart:hover {
+    transform: scale(1.05); /* Efeito suave ao passar o mouse */
+}
+
+.project-links {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.project-links {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px; /* Adiciona espaço entre os dois botões */
+}
+
+/* --- Animações --- */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
